@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Co-Pilot | İçerik Üreticileri İçin Algoritmik Zeka Kokpiti</title>
+  <meta name="description" content="YouTube kanalınız için gerçek zamanlı analitik, kitle tutma uyarıları ve yapay zeka destekli büyüme ko-pilotu.">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono per design.md -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- ==================== TOP NAVIGATION BAR ==================== -->
+    <header class="top-navbar">
+      <div class="brand-section">
+        <a href="/" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+          <div class="brand-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <div>
+            <div class="brand-title">
+              YOUTUBE CO-PILOT
+              <span class="brand-badge">v2.4</span>
+            </div>
+            <div style="font-size: 11px; color: var(--text-secondary); margin-top: 2px;">
+              İçerik Strateji & Büyüme Kokpiti
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav style="display: flex; align-items: center; gap: 24px;">
+        <a href="/" style="color: var(--accent-primary); text-decoration: none; font-weight: 600; font-size: 13px;">Ana Sayfa</a>
+        <a href="/dashboard" style="color: var(--text-secondary); text-decoration: none; font-weight: 500; font-size: 13px; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--text-secondary)'">Dashboard</a>
+        <a href="/privacy" style="color: var(--text-secondary); text-decoration: none; font-weight: 500; font-size: 13px; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--text-secondary)'">Gizlilik Politikası</a>
+        <a href="/tos" style="color: var(--text-secondary); text-decoration: none; font-weight: 500; font-size: 13px; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--text-secondary)'">Kullanım Şartları</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="/dashboard" class="btn-primary" style="text-decoration: none;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
+          </svg>
+          Dashboard'u Aç &rarr;
+        </a>
+      </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section">
+      <div class="hero-pill">
+        <span class="pulse-dot"></span>
+        YOUTUBE CREATOR INTELLIGENCE CO-PILOT
+      </div>
+
+      <h1 class="hero-title">
+        YouTube Kanalınızı <br>
+        <span class="highlight">Algoritmik Zeka</span> ile Yönetin
+      </h1>
+
+      <p class="hero-subtitle">
+        Videolarınızdaki <strong>vampir düşüşlerini</strong> anında yakalayın, gerçek zamanlı izleyici hızını analiz edin, tıklanma oranınızı (CTR) yapay zeka ile test edin ve kanal kazançlarınızı canlı takip edin.
+      </p>
+
+      <div class="hero-actions">
+        <a href="/dashboard" class="btn-hero-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          Canlı Dashboard'a Giriş Yap
+        </a>
+
+        <a href="/dashboard" class="btn-hero-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#FF0000">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          Google ile YouTube Bağla
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== HERO PREVIEW CARD ==================== -->
+    <section class="card" style="padding: 24px; border-color: rgba(0, 229, 255, 0.35); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);">
+      <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px; margin-bottom: 20px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="width: 12px; height: 12px; border-radius: 50%; background: #FF5F56;"></div>
+          <div style="width: 12px; height: 12px; border-radius: 50%; background: #FFBD2E;"></div>
+          <div style="width: 12px; height: 12px; border-radius: 50%; background: #27C93F;"></div>
+          <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-secondary); margin-left: 8px;">
+            https://copilot.youtube-studio/live-console
+          </span>
+        </div>
+        <div class="live-status-pill">
+          <span class="pulse-dot"></span>
+          CANLI VERİ AKIŞI AKTİF
+        </div>
+      </div>
+
+      <div class="kpi-row" style="margin-bottom: 20px;">
+        <div style="background: #151515; border: 1px solid var(--border-subtle); border-radius: 12px; padding: 16px;">
+          <span class="kpi-label">Anlık Trafik Hızı</span>
+          <div class="kpi-value" style="font-size: 26px;">48,290 <span class="kpi-unit">izlenme/saat</span></div>
+          <span class="kpi-trend positive">+14.8% artışta</span>
+        </div>
+
+        <div style="background: #151515; border: 1px solid var(--border-subtle); border-radius: 12px; padding: 16px;">
+          <span class="kpi-label">Doğrulanmış Kitle</span>
+          <div class="kpi-value" style="font-size: 26px;">142,850 <span class="kpi-unit">abone</span></div>
+          <span class="kpi-trend positive">+340 bugün</span>
+        </div>
+
+        <div style="background: #151515; border: 1px solid var(--border-subtle); border-radius: 12px; padding: 16px;">
+          <span class="kpi-label">Tahmini Kazanç (RPM)</span>
+          <div class="kpi-value" style="font-size: 26px; color: var(--accent-primary);">₺ 18.420,50</div>
+          <span style="font-size: 12px; color: var(--text-secondary);">RPM: ₺ 42,10 / 1k</span>
+        </div>
+      </div>
+
+      <div style="background: #131313; border: 1px solid var(--border-subtle); border-radius: 12px; padding: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="background: var(--alert-bg); border-left: 4px solid var(--accent-alert); color: var(--accent-alert); padding: 8px 12px; border-radius: 4px; font-weight: 700; font-size: 12px;">
+            ⚠️ VAMPİR DÜŞÜŞÜ ALARMI
+          </div>
+          <span style="color: #fff; font-size: 13px;">
+            Son videonuzun <strong>01:42</strong> dakikasında izleyicilerin <strong>%38'i</strong> videoyu terk ediyor!
+          </span>
+        </div>
+        <a href="/dashboard" class="btn-primary" style="text-decoration: none; font-size: 12px;">
+          Kurgu Teşhisini İncele &rarr;
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== KEY FEATURES GRID ==================== -->
+    <section style="margin-top: var(--space-48);">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto var(--space-32);">
+        <span class="brand-badge">ÖZELLİKLER & GÜÇ</span>
+        <h2 style="font-size: 28px; font-weight: 800; color: #fff; margin-top: 8px;">
+          Kanalınızı Büyütmek İçin Tasarlandı
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 14px; margin-top: 6px;">
+          Power BI dashboard disiplini, sadeleştirilmiş kullanıcı deneyimi ve yapay zeka karar mekanizması.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+          </div>
+          <h3 class="feature-title">Gerçek Zamanlı Trafik & Hız</h3>
+          <p class="feature-desc">
+            Son 60 dakika, 24 saat ve haftalık tepe noktalarını yumuşatılmış alan grafikleriyle izleyin. Anlık izlenme hızınızı saniye saniye takip edin.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap" style="color: var(--accent-alert);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </div>
+          <h3 class="feature-title">Vampir Düşüş (Drop) Dedektörü</h3>
+          <p class="feature-desc">
+            İzleyicilerin topluca videodan ayrıldığı kritik saniyeleri otomatik tespit edin. Kurgusal kırpma ve bitiş kartı aksiyonlarıyla izlenme sürenizi kurtarın.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">AI Başlık & Kanca Laboratuvarı</h3>
+          <p class="feature-desc">
+            Video fikirlerinizi yayınlamadan önce test edin. Co-Pilot algoritma psikolojisine göre viral potansiyel skoru hesaplar ve 3 yüksek CTR alternatifi önerir.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap" style="color: var(--accent-secondary);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <line x1="12" y1="1" x2="12" y2="23"></line>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Çoklu Para Birimi & Net RPM</h3>
+          <p class="feature-desc">
+            Kanal gelirlerinizi ve RPM oranınızı anında Türk Lirası (₺), Amerikan Doları ($) ve Bolivianos (Bs.) arasında çevirerek analiz edin.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap" style="color: #FF0000;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Resmi YouTube OAuth 2.0</h3>
+          <p class="feature-desc">
+            Google'ın resmi OAuth 2.0 altyapısı ile kanalınıza güvenle bağlanın. Şifrenizi asla paylaşmazsınız; yalnızca salt okunur analitik verisi çekilir.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Gizlilik Odaklı Mimari</h3>
+          <p class="feature-desc">
+            Verileriniz üçüncü taraf şirketlere veya reklam ağlarına satılmaz. Oturum anahtarları yerel cihazınızda kalır ve istenildiği an erişim iptal edilebilir.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CALL TO ACTION SECTION ==================== -->
+    <section class="card" style="margin-top: var(--space-48); text-align: center; padding: 48px 24px; background: linear-gradient(135deg, #1E1E1E 0%, #151515 100%); border-color: var(--accent-primary);">
+      <h2 style="font-size: 32px; font-weight: 800; color: #fff;">
+        Kanalınızı Bir Sonraki Seviyeye Taşıyın
+      </h2>
+      <p style="color: var(--text-secondary); max-width: 560px; margin: 12px auto 28px; font-size: 15px;">
+        Kurulum gerektirmez. Hemen dashboard'u açabilir, verilerinizi canlı simüle edebilir veya YouTube hesabınızı tek tıkla bağlayabilirsiniz.
+      </p>
+      <a href="/dashboard" class="btn-hero-primary" style="font-size: 16px;">
+        🚀 Co-Pilot Dashboard'u Şimdi Başlat
+      </a>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="app-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-icon" style="width: 32px; height: 32px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <span>YouTube Co-Pilot Studio</span>
+        </div>
+
+        <div class="footer-links">
+          <a href="/" class="footer-link">Ana Sayfa</a>
+          <a href="/dashboard" class="footer-link">Dashboard</a>
+          <a href="/privacy" class="footer-link">Gizlilik Politikası (Privacy Policy)</a>
+          <a href="/tos" class="footer-link">Kullanım Şartları (Terms of Service)</a>
+          <a href="https://myaccount.google.com/permissions" target="_blank" class="footer-link">Google İzinlerini Yönet</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 YouTube Co-Pilot Studio. Tüm hakları saklıdır.</span>
+        <span>Bu uygulama YouTube API Hizmetlerini (YouTube API Services) kullanmaktadır.</span>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
