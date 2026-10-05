@@ -85,8 +85,35 @@ body {
   background: #3c3c3e;
 }
 
+/* Animated Radial Gradient Background Layer for Dashboard (Breathing Effect) */
+.animated-gradient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.85;
+  background: radial-gradient(115% 115% at 50% 20%, rgba(18, 18, 18, 0.95) 25%, rgba(0, 229, 255, 0.28) 45%, rgba(50, 215, 75, 0.12) 65%, rgba(30, 30, 30, 0.7) 85%, #121212 100%);
+  animation: gradientBreathing 8s ease-in-out infinite alternate;
+}
+
+@keyframes gradientBreathing {
+  0% {
+    background: radial-gradient(108% 108% at 50% 18%, rgba(18, 18, 18, 0.95) 25%, rgba(0, 229, 255, 0.22) 42%, rgba(50, 215, 75, 0.10) 62%, rgba(30, 30, 30, 0.7) 85%, #121212 100%);
+    transform: scale(1);
+  }
+  100% {
+    background: radial-gradient(124% 124% at 50% 22%, rgba(18, 18, 18, 0.95) 28%, rgba(0, 229, 255, 0.38) 48%, rgba(50, 215, 75, 0.18) 68%, rgba(30, 30, 30, 0.7) 85%, #121212 100%);
+    transform: scale(1.03);
+  }
+}
+
 /* Layout Container */
 .app-container {
+  position: relative;
+  z-index: 1;
   max-width: 1480px;
   margin: 0 auto;
   padding: var(--space-24) var(--space-24) var(--space-48);

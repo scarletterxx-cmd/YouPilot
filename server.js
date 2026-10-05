@@ -190,6 +190,33 @@ const server = http.createServer(async (req, res) => {
     return res.end(fs.readFileSync(path.join(__dirname, 'terms.html')));
   }
 
+  if (req.method === 'GET' && (pathname === '/react' || pathname === '/react-dashboard' || pathname === '/app' || pathname === '/app.html')) {
+    const distAppPath = path.join(__dirname, 'dist', 'app.html');
+    const localAppPath = path.join(__dirname, 'app.html');
+    const targetPath = fs.existsSync(distAppPath) ? distAppPath : localAppPath;
+    if (fs.existsSync(targetPath)) {
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+      return res.end(fs.readFileSync(targetPath));
+    }
+  }
+
+  // Serve compiled React assets from dist/assets/
+  if (req.method === 'GET' && pathname.startsWith('/assets/')) {
+    const assetPath = path.join(__dirname, 'dist', pathname);
+    if (fs.existsSync(assetPath)) {
+      const ext = path.extname(assetPath).toLowerCase();
+      const mimeTypes = {
+        '.js': 'application/javascript; charset=utf-8',
+        '.css': 'text/css; charset=utf-8',
+        '.json': 'application/json; charset=utf-8',
+        '.png': 'image/png',
+        '.svg': 'image/svg+xml'
+      };
+      res.writeHead(200, { 'Content-Type': mimeTypes[ext] || 'application/octet-stream' });
+      return res.end(fs.readFileSync(assetPath));
+    }
+  }
+
   if (req.method === 'GET' && pathname === '/styles.css') {
     res.writeHead(200, { 'Content-Type': 'text/css; charset=utf-8' });
     return res.end(fs.readFileSync(path.join(__dirname, 'styles.css')));
